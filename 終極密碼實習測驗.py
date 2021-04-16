@@ -12,7 +12,7 @@ lowest=int(input('輸入密碼的最小值:'))
 highest=int(input('輸入密碼的最大值:'))
 ans= randint(lowest, highest)
 guess=0
-times=1#紀錄使用者回答的次數
+times=0#紀錄使用者回答的次數
 
 #讓使用者重複猜數字，直到正確為止
 while True:
@@ -45,6 +45,7 @@ while True:
      
         #判斷回答正確時，停止迴圈運行，並顯示回答次數
     else:
+         times+=1
          print('答對了！！算你厲害！\n'+'密碼就是',(ans),'，你一共猜了',times,'次')
          break
                 
